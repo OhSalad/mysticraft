@@ -1,0 +1,47 @@
+{
+	"schemaVersion": 1,
+	"id": "mysticraft",
+	"version": "${version}",
+	"name": "MystiCraft",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/mysticraft/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.mysticraft.MystiCraft"
+		],
+		"client": [
+			"com.mysticraft.MystiCraftClient"
+		],
+		"fabric-datagen": [
+			"com.mysticraft.MystiCraftDataGenerator"
+		],
+		"modmenu": [
+			"com.mysticraft.config.MystiCraftModMenu"
+		]
+	},
+	"mixins": [
+		"mysticraft.mixins.json",
+		{
+			"config": "mysticraft.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=${loader_version}",
+		"minecraft": "~${minecraft_version}",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"modmenu": ">=${modmenu_version}"
+	}
+}

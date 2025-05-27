@@ -1,0 +1,20 @@
+pluginManagement {
+	repositories {
+		// This is the key fix – adds Fabric's maven to resolve Loom
+		maven {
+			name = "Fabric"
+			url = "https://maven.fabricmc.net/"
+		}
+		gradlePluginPortal() // Required for Maven Publish, etc.
+	}
+}
+dependencyResolutionManagement {
+	repositoriesMode.set(RepositoriesMode.PREFER_PROJECT) // This is the key line
+	repositories {
+		// You can define global repositories here if you want them to apply to all subprojects
+		// For Fabric Loom, these are usually defined in build.gradle, but you *could* put them here.
+		// For now, ensure the repositoriesMode.set is correct.
+	}
+}
+
+rootProject.name = "mysticraft"
