@@ -1,6 +1,7 @@
 package com.mysticraft;
 
 import com.mysticraft.hud.HudManager; // Import your HudManager
+import com.mysticraft.item.ModItems;
 import net.fabricmc.api.ClientModInitializer;
 
 public class MystiCraftClient implements ClientModInitializer {

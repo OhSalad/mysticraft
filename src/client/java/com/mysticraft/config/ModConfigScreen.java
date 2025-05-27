@@ -6,7 +6,7 @@ import net.minecraft.client.gui.screen.Screen;
 
 public class ModConfigScreen {
 
-    // This static method is what EldertideModMenu will call to get the screen
+    // This static method is what mysticraftModMenu will call to get the screen
     public static Screen create(Screen parent) {
         // AutoConfig.getConfigScreen returns a Supplier<Screen> in newer versions.
         // You need to call .get() on the Supplier to get the actual Screen instance.
